@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Registration</title>
+</head>
+<body>
+    <form action="" method="">
+        <h2>Bio</h2>
+        <div id="Bio">
+            <label for="Fname">First Name</label>
+            <input type="text" id="Fname" required>
+            <label for="Lname">Last Name</label>
+            <input type="text" id="Lname" required>
+            <label for="Age">Age</label>
+            <input type="text" id="Age" required><br>
+
+            <p>What is your Gender?</p>
+            <label for="Male">Male</label>
+            <input type="radio" id="Male" name="Gender" required>
+            <label for="Female">Female</label>
+            <input type="radio" id="Female" name="Gender"> <br><br>
+
+            <label for="PhoneNum">Phone Number</label>
+            <input type="text" id="PhoneNum" required>
+            <label for="Email">Email Address</label>
+            <input type="text" id="Email">
+
+            <p>Highest level of education</p>
+            <input type="radio" name="EducationHistory" id="LessHighschool" required>
+            <label for="LessHighschool">Less Than High School</label> <br>
+            <input type="radio" name="EducationHistory" id="Highschool">
+            <label for="Highschool">Highschool</label> <br>
+            <input type="radio" name="EducationHistory" id="Tradeschool">
+            <label for="Tradeschool">Trade School</label> <br>
+            <input type="radio" name="EducationHistory" id="University">
+            <label for="University">University</label>
+        </div> <br><br><br>
+
+        <div id="Identity">
+            <h2>Identity</h2>
+            <label for="IdDoc">Upload Government ID</label>
+            <input type="file" name="" id="IdDoc" required>
+            <br>
+            <label for="CvDoc">Upload CV</label>
+            <input type="file" name="" id="CvDoc">
+            <br>
+            <label for="Picture">Upload Picture optional</label>
+            <input type="file" name="" id="Picture">
+        </div><br><br><br>
+
+        <div id="Profile">
+            <h2>Profile</h2>
+            <p>What type of job are you looking for</p>
+            <br>
+            <input type="radio" id="Cooking" name="JobType" required>
+            <label for="Cooking">Cooking</label>
+            <input type="radio" id="Cleaning" name="JobType">
+            <label for="Cleaning">Cleaning</label>
+            <input type="radio" id="Babysitting" name="JobType">
+            <label for="Babysitting">Babysitting</label>
+            <!--Add other option with a text box-->
+
+            <p>What type of work schedule are you looking for</p>
+            <input type="radio" id="LiveIn" name="Schedule" required>
+            <label for="LiveIn">Live In</label>
+            <input type="radio" id="Commute" name="Schedule">
+            <label for="Commute">Commute</label> <br> <br>
+
+            <p>Do you have previous work experience?</p>
+            <label for="YesExperience">Yes</label>
+            <input type="radio" id="YesExperience" name="Experience?" required>
+            <label for="NoExperience">No</label>
+            <input type="radio" id="NoExperience" name="Experience?"> <br><br>
+            <div id="PreviousEmployers" style="display: none;">
+                <label for="Employer">Previous Employer Name</label>
+                <input type="text" id="Employer">
+                <label for="EmployerPhone">Previous Employer Phone Number</label>
+                <input type="text" id="EmployerPhone">
+                <label for="EmploymentLength">How long were you employed with them?</label>
+                <input type="text" id="EmploymentLength">
+            </div> <br>
+            
+            <h4>Reference Information</h4>
+            <label for="ReferenceName">Reference Name</label>
+            <input type="text" id="ReferenceName" required> <br><br>
+            
+            <label for="ReferencePhone">Reference Phone</label>
+            <input type="text" id="ReferencePhone" required> <br><br>
+            
+            <label for="ReferenceEmail">Reference Email</label>
+            <input type="text" id="ReferenceEmail"> <br><br>
+            
+            <label for="ReferenceAddress">Reference Address</label>
+            <input type="text" id="ReferenceAddress" required> <br><br>
+
+            <label for="ReferenceId">Copy of Reference's ID</label>
+            <input type="file" id="ReferenceId" required>
+        </div><br><br><br>
+
+        <div id="Agreement">
+            <h3>Agreement, Terms, and Conditions</h3>
+            <p>I, <input type="text" placeholder="Type Full Name Here" required>, agree to the terms and conditions set above and understand that writing my name in the above text box constitutes a legally binding signature.</p>
+        </div>
+
+        <input type="submit" value="Register">
+    </form>
+<script src="Worker_registration.js"></script>
+</body>
+</html>
