@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Registration</title>
+</head>
+<body>
+    <form action="" method="">
+        <h2>Bio</h2>
+        <div id="Bio">
+            <label for="Fname">First Name</label>
+            <input type="text" id="Fname" required>
+            <label for="Lname">Last Name</label>
+            <input type="text" id="Lname" required>
+            <label for="Age">Age</label>
+            <input type="text" id="Age" required><br>
+
+            <p>What is your Gender?</p>
+            <label for="Male">Male</label>
+            <input type="radio" id="Male" name="Gender" required>
+            <label for="Female">Female</label>
+            <input type="radio" id="Female" name="Gender"> <br><br>
+            
+            <label for="Address">Address</label>
+            <input type="text" name="Address" id="Address"> <br><br>
+        </div>
+        <div id="Identity">
+            <h2>Identity</h2>
+            <label for="IdDoc">Upload Government ID</label>
+            <input type="file" name="" id="IdDoc" required>
+            <br>
+            <label for="Picture">Upload Picture optional</label>
+            <input type="file" name="" id="Picture">
+        </div><br><br>
+        
+        <div id="Profile">
+            <h2>Profile</h2>
+            <p>What type of job are you looking for</p>
+            <input type="checkbox" id="Cooking" name="JobType" required>
+            <label for="Cooking">Cooking</label>
+            <input type="checkbox" id="Cleaning" name="JobType">
+            <label for="Cleaning">Cleaning</label>
+            <input type="checkbox" id="Babysitting" name="JobType">
+            <label for="Babysitting">Babysitting</label>
+            <input type="checkbox" id="OtherJob" name="JobType">
+            <label for="OtherJob">Other</label>
+            <input type="text" name="JobType" id="OtherJobInp">
+
+            <p>What type of work schedule are you looking for</p>
+            <input type="radio" id="LiveIn" name="Schedule" required>
+            <label for="LiveIn">Live In</label>
+            <input type="radio" id="Commute" name="Schedule">
+            <label for="Commute">Commute</label> <br>
+
+            <p>Do you have Language requirements?</p>
+            <input type="checkbox" id="Amharic" name="Languages">
+            <label for="Amharic">Amharic</label>
+            <input type="checkbox" id="Oromigna" name="Languages">
+            <label for="Oromigna">Oromigna</label>
+            <input type="checkbox" id="Tigrigna" name="Languages">
+            <label for="Tigrigna">Tigrigna</label>
+            <input type="checkbox" id="Somaligna" name="Languages">
+            <label for="Somaligna">Somaligna</label>
+            <input type="checkbox" id="Sidamigna" name="Languages">
+            <label for="Sidamigna">Sidamigna</label>
+            <input type="checkbox" id="OtherLang" name="Languages">
+            <label for="OtherLang">Other</label>
+
+            <label for="SpecialRequirements">If you have any special requirements, please write them in the text box</label>
+            <input type="text" name="SpecialReqInp" id="SpecialRequirements"> <br><br>
+
+            <label for="Salary">What is your Monthly Salary budget</label>
+            <input type="text" name="SalaryInp" id="Salary"> <br><br>
+        </div>
+
+        <div id="Agreement">
+            <h3>Agreement, Terms, and Conditions</h3>
+            <p>I, <input type="text" placeholder="Type Full Name Here" required>, agree to the terms and conditions set above and understand that writing my name in the above text box constitutes a legally binding signature.</p>
+        </div>
+
+        <input type="submit" value="Register">
+    </form>
+
+    
+</body>
+</html>

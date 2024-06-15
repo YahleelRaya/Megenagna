@@ -54,13 +54,15 @@
             <h2>Profile</h2>
             <p>What type of job are you looking for</p>
             <br>
-            <input type="radio" id="Cooking" name="JobType" required>
+            <input type="checkbox" id="Cooking" name="JobType" required>
             <label for="Cooking">Cooking</label>
-            <input type="radio" id="Cleaning" name="JobType">
+            <input type="checkbox" id="Cleaning" name="JobType">
             <label for="Cleaning">Cleaning</label>
-            <input type="radio" id="Babysitting" name="JobType">
+            <input type="checkbox" id="Babysitting" name="JobType">
             <label for="Babysitting">Babysitting</label>
-            <!--Add other option with a text box-->
+            <input type="checkbox" id="OtherJob" name="JobType">
+            <label for="OtherJob">Other</label>
+            <input type="text" name="JobType" id="OtherJobInp">
 
             <p>What type of work schedule are you looking for</p>
             <input type="radio" id="LiveIn" name="Schedule" required>
@@ -93,8 +95,8 @@
             <label for="Somaligna">Somaligna</label>
             <input type="checkbox" id="Sidamigna" name="Languages">
             <label for="Sidamigna">Sidamigna</label>
-            <input type="checkbox" id="Other" name="Languages">
-            <label for="Other">Other</label>
+            <input type="checkbox" id="OtherLang" name="Languages">
+            <label for="OtherLang">Other</label>
 
             <h4>Reference Information</h4>
             <label for="ReferenceName">Reference Name</label>
