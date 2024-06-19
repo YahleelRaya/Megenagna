@@ -1,0 +1,23 @@
+header{
+    text-align: center;
+}
+
+#Registration {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.RegistrationLinks {
+    text-align: center;
+    margin: auto;
+    display: inline;
+}
+
+#EmployerRegistration {
+    padding-left: 5%;
+}
+#WorkerRegistration {
+    padding-right: 5%;
+}
+
+
