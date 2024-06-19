@@ -10,8 +10,8 @@
         <a href="/Megenagna_main/Megenagna_main.html"><h3>Home</h3></a>
     </header>
     <form action="" method="">
-        <h2>Bio</h2>
-        <div id="Bio">
+        <fieldset id="Bio">
+            <legend>Bio</legend>
             <label for="Fname">First Name</label>
             <input type="text" id="Fname" name="Fname" required>
             <label for="Lname">Last Name</label>
@@ -26,18 +26,19 @@
             <input type="radio" id="Female" name="Gender" value="Female"> <br><br>
             <label for="Address">Address</label>
             <input type="text" name="Address" id="Address"> <br><br>
-        </div>
-        <div id="Identity">
-            <h2>Identity</h2>
+        </fieldset>
+        
+        <fieldset id="Identity">
+            <legend>Identity</legend>
             <label for="IdDoc">Upload Government ID</label>
             <input type="file" name="IdDoc" id="IdDoc" required>
             <br>
             <label for="Picture">Upload Picture optional</label>
             <input type="file" name="Picture" id="Picture">
-        </div><br><br>
+        </fieldset> <br><br>
         
-        <div id="Profile">
-            <h2>Profile</h2>
+        <fieldset id="Profile">
+            <legend>Profile</legend>
             <p>What type of job are you looking for</p>
             <input type="checkbox" id="Cooking" name="JobType" value="Cooking" required>
             <label for="Cooking">Cooking</label>
@@ -46,7 +47,7 @@
             <input type="checkbox" id="Babysitting" name="JobType" value="Babysitting">
             <label for="Babysitting">Babysitting</label> <br>
             <label for="OtherJob">Other</label>
-            <input type="text" id="OtherJob" name="JobType">
+            <input type="text" id="OtherJob" name="OtherJob">
 
 
             <p>What type of work schedule are you looking for</p>
@@ -68,7 +69,7 @@
             <label for="Sidamigna">Sidamigna</label>
 
             <label for="OtherLang">Other</label>
-            <input type="text" id="OtherLang" name="Languages">
+            <input type="text" id="OtherLang" name="OtherLang">
             
 
             <label for="SpecialRequirements">If you have any special requirements, please write them in the text box</label>
@@ -76,13 +77,12 @@
 
             <label for="Salary">What is your Monthly Salary budget</label>
             <input type="text" name="Salary" id="Salary"> <br><br>
-        </div>
-
-        <div id="Agreement">
+        </fieldset>
+        <fieldset id="Agreement">
+            <legend>Agreement</legend>
             <h3>Agreement, Terms, and Conditions</h3>
             <p>I, <input type="text" placeholder="Type Full Name Here" name="AgreementSignature" required>, agree to the terms and conditions set above and understand that writing my name in the above text box constitutes a legally binding signature.</p>
-        </div>
-
+        </fieldset>
         <input type="submit" value="Register">
     </form>
 
