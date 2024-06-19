@@ -13,73 +13,74 @@
         <h2>Bio</h2>
         <div id="Bio">
             <label for="Fname">First Name</label>
-            <input type="text" id="Fname" required>
+            <input type="text" id="Fname" name="Fname" required>
             <label for="Lname">Last Name</label>
-            <input type="text" id="Lname" required>
+            <input type="text" id="Lname" name="Lname" required>
             <label for="Age">Age</label>
-            <input type="text" id="Age" required><br>
+            <input type="text" id="Age" name="Age" required><br>
 
             <p>What is your Gender?</p>
             <label for="Male">Male</label>
-            <input type="radio" id="Male" name="Gender" required>
+            <input type="radio" id="Male" name="Gender" value="Male" required>
             <label for="Female">Female</label>
-            <input type="radio" id="Female" name="Gender"> <br><br>
-            
+            <input type="radio" id="Female" name="Gender" value="Female"> <br><br>
             <label for="Address">Address</label>
             <input type="text" name="Address" id="Address"> <br><br>
         </div>
         <div id="Identity">
             <h2>Identity</h2>
             <label for="IdDoc">Upload Government ID</label>
-            <input type="file" name="" id="IdDoc" required>
+            <input type="file" name="IdDoc" id="IdDoc" required>
             <br>
             <label for="Picture">Upload Picture optional</label>
-            <input type="file" name="" id="Picture">
+            <input type="file" name="Picture" id="Picture">
         </div><br><br>
         
         <div id="Profile">
             <h2>Profile</h2>
             <p>What type of job are you looking for</p>
-            <input type="checkbox" id="Cooking" name="JobType" required>
+            <input type="checkbox" id="Cooking" name="JobType" value="Cooking" required>
             <label for="Cooking">Cooking</label>
-            <input type="checkbox" id="Cleaning" name="JobType">
+            <input type="checkbox" id="Cleaning" name="JobType" value="Cleaning">
             <label for="Cleaning">Cleaning</label>
-            <input type="checkbox" id="Babysitting" name="JobType">
-            <label for="Babysitting">Babysitting</label>
-            <input type="checkbox" id="OtherJob" name="JobType">
+            <input type="checkbox" id="Babysitting" name="JobType" value="Babysitting">
+            <label for="Babysitting">Babysitting</label> <br>
             <label for="OtherJob">Other</label>
-            <input type="text" name="JobType" id="OtherJobInp">
+            <input type="text" id="OtherJob" name="JobType">
+
 
             <p>What type of work schedule are you looking for</p>
-            <input type="radio" id="LiveIn" name="Schedule" required>
+            <input type="radio" id="LiveIn" name="Schedule" value="LiveIn" required>
             <label for="LiveIn">Live In</label>
-            <input type="radio" id="Commute" name="Schedule">
+            <input type="radio" id="Commute" name="Schedule" value="Commute">
             <label for="Commute">Commute</label> <br>
 
             <p>Do you have Language requirements?</p>
-            <input type="checkbox" id="Amharic" name="Languages">
+            <input type="checkbox" id="Amharic" name="Languages" value="Amharic">
             <label for="Amharic">Amharic</label>
-            <input type="checkbox" id="Oromigna" name="Languages">
+            <input type="checkbox" id="Oromigna" name="Languages" value="Oromigna">
             <label for="Oromigna">Oromigna</label>
-            <input type="checkbox" id="Tigrigna" name="Languages">
+            <input type="checkbox" id="Tigrigna" name="Languages" value="Tigrigna">
             <label for="Tigrigna">Tigrigna</label>
-            <input type="checkbox" id="Somaligna" name="Languages">
+            <input type="checkbox" id="Somaligna" name="Languages" value="Somaligna">
             <label for="Somaligna">Somaligna</label>
-            <input type="checkbox" id="Sidamigna" name="Languages">
+            <input type="checkbox" id="Sidamigna" name="Languages" value="Sidamigna">
             <label for="Sidamigna">Sidamigna</label>
-            <input type="checkbox" id="OtherLang" name="Languages">
+
             <label for="OtherLang">Other</label>
+            <input type="text" id="OtherLang" name="Languages">
+            
 
             <label for="SpecialRequirements">If you have any special requirements, please write them in the text box</label>
-            <input type="text" name="SpecialReqInp" id="SpecialRequirements"> <br><br>
+            <input type="text" name="SpecialRequirements" id="SpecialRequirements"> <br><br>
 
             <label for="Salary">What is your Monthly Salary budget</label>
-            <input type="text" name="SalaryInp" id="Salary"> <br><br>
+            <input type="text" name="Salary" id="Salary"> <br><br>
         </div>
 
         <div id="Agreement">
             <h3>Agreement, Terms, and Conditions</h3>
-            <p>I, <input type="text" placeholder="Type Full Name Here" required>, agree to the terms and conditions set above and understand that writing my name in the above text box constitutes a legally binding signature.</p>
+            <p>I, <input type="text" placeholder="Type Full Name Here" name="AgreementSignature" required>, agree to the terms and conditions set above and understand that writing my name in the above text box constitutes a legally binding signature.</p>
         </div>
 
         <input type="submit" value="Register">
