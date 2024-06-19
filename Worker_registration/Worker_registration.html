@@ -21,9 +21,9 @@
 
             <p>What is your Gender?</p>
             <label for="Male">Male</label>
-            <input type="radio" id="Male" name="Gender" required>
+            <input type="radio" id="Male" name="Gender" value="Male" required>
             <label for="Female">Female</label>
-            <input type="radio" id="Female" name="Gender"> <br><br>
+            <input type="radio" id="Female" name="Gender" value="Female"> <br><br>
 
             <label for="PhoneNum">Phone Number</label>
             <input type="text" id="PhoneNum" name="PhoneNum" required>
@@ -31,13 +31,13 @@
             <input type="text" name="Email" id="Email">
 
             <p>Highest level of education</p>
-            <input type="radio" name="EducationHistory" id="LessHighschool" required>
-            <label for="LessHighschool">Less Than High School</label> <br>
-            <input type="radio" name="EducationHistory" id="Highschool">
+            <input type="radio" name="EducationHistory" id="LessThanHS" value="LessThanHS" required>
+            <label for="LessThanHS">Less Than High School</label> <br>
+            <input type="radio" name="EducationHistory" id="Highschool" value="Highschool">
             <label for="Highschool">Highschool</label> <br>
-            <input type="radio" name="EducationHistory" id="Tradeschool">
+            <input type="radio" name="EducationHistory" id="Tradeschool" value="Tradeschool">
             <label for="Tradeschool">Trade School</label> <br>
-            <input type="radio" name="EducationHistory" id="University">
+            <input type="radio" name="EducationHistory" id="University" value="University">
             <label for="University">University</label>
         </div> <br><br><br>
 
@@ -57,27 +57,27 @@
             <h2>Profile</h2>
             <p>What type of job are you looking for</p>
             <br>
-            <input type="checkbox" id="Cooking" name="JobType" required>
+            <input type="checkbox" id="Cooking" name="JobType" value="Cooking" required>
             <label for="Cooking">Cooking</label>
-            <input type="checkbox" id="Cleaning" name="JobType">
+            <input type="checkbox" id="Cleaning" name="JobType" value="Cleaning">
             <label for="Cleaning">Cleaning</label>
-            <input type="checkbox" id="Babysitting" name="JobType">
-            <label for="Babysitting">Babysitting</label>
-            <input type="checkbox" id="OtherJob" name="JobType">
+            <input type="checkbox" id="Babysitting" name="JobType" value="Babysitting">
+            <label for="Babysitting">Babysitting</label> <br>
             <label for="OtherJob">Other</label>
-            <input type="text" name="JobType" id="OtherJobInp">
+            <input type="text" id="OtherJob" name="JobType">
+            
 
             <p>What type of work schedule are you looking for</p>
-            <input type="radio" id="LiveIn" name="Schedule" required>
+            <input type="radio" id="LiveIn" name="Schedule" value="LiveIn" required>
             <label for="LiveIn">Live In</label>
-            <input type="radio" id="Commute" name="Schedule">
+            <input type="radio" id="Commute" name="Schedule" value="Commute">
             <label for="Commute">Commute</label> <br> <br>
 
             <p>Do you have previous work experience?</p>
             <label for="YesExperience">Yes</label>
-            <input type="radio" id="YesExperience" name="Experience?" required>
+            <input type="radio" id="YesExperience" name="Experience?" value="Yes" required>
             <label for="NoExperience">No</label>
-            <input type="radio" id="NoExperience" name="Experience?"> <br><br>
+            <input type="radio" id="NoExperience" name="Experience?" value="No"> <br><br>
             <div id="PreviousEmployers" style="display: none;">
                 <label for="EmployerName">Previous Employer Name</label>
                 <input type="text" id="EmployerName" name="EmployerName">
@@ -88,18 +88,19 @@
             </div> <br>
 
             <p>What languages do you speak?</p>
-            <input type="checkbox" id="Amharic" name="Languages">
+            <input type="checkbox" id="Amharic" name="Languages" value="Amharic">
             <label for="Amharic">Amharic</label>
-            <input type="checkbox" id="Oromigna" name="Languages">
+            <input type="checkbox" id="Oromigna" name="Languages" value="Oromigna">
             <label for="Oromigna">Oromigna</label>
-            <input type="checkbox" id="Tigrigna" name="Languages">
+            <input type="checkbox" id="Tigrigna" name="Languages" value="Tigrigna">
             <label for="Tigrigna">Tigrigna</label>
-            <input type="checkbox" id="Somaligna" name="Languages">
+            <input type="checkbox" id="Somaligna" name="Languages" value="Somaligna">
             <label for="Somaligna">Somaligna</label>
-            <input type="checkbox" id="Sidamigna" name="Languages">
+            <input type="checkbox" id="Sidamigna" name="Languages" value="Sidamigna">
             <label for="Sidamigna">Sidamigna</label>
-            <input type="checkbox" id="OtherLang" name="Languages">
             <label for="OtherLang">Other</label>
+            <input type="text" id="OtherLang" name="Languages">
+            
 
             <h4>Reference Information</h4>
             <label for="ReferenceName">Reference Name</label>
