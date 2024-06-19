@@ -9,15 +9,15 @@
     <header>
         <a href="/Megenagna_main/Megenagna_main.html"><h3>Home</h3></a>
     </header>
-    <form action="" method="">
+    <form action="" method="" name="WorkerRegistration">
         <h2>Bio</h2>
         <div id="Bio">
             <label for="Fname">First Name</label>
-            <input type="text" id="Fname" required>
+            <input type="text" id="Fname" name="Fname" required>
             <label for="Lname">Last Name</label>
-            <input type="text" id="Lname" required>
+            <input type="text" id="Lname" name="Lname" required>
             <label for="Age">Age</label>
-            <input type="text" id="Age" required><br>
+            <input type="text" id="Age" name="Age" required><br>
 
             <p>What is your Gender?</p>
             <label for="Male">Male</label>
@@ -26,9 +26,9 @@
             <input type="radio" id="Female" name="Gender"> <br><br>
 
             <label for="PhoneNum">Phone Number</label>
-            <input type="text" id="PhoneNum" required>
+            <input type="text" id="PhoneNum" name="PhoneNum" required>
             <label for="Email">Email Address</label>
-            <input type="text" id="Email">
+            <input type="text" name="Email" id="Email">
 
             <p>Highest level of education</p>
             <input type="radio" name="EducationHistory" id="LessHighschool" required>
@@ -44,13 +44,13 @@
         <div id="Identity">
             <h2>Identity</h2>
             <label for="IdDoc">Upload Government ID</label>
-            <input type="file" name="" id="IdDoc" required>
+            <input type="file" name="IdDoc" id="IdDoc" required>
             <br>
             <label for="CvDoc">Upload CV</label>
-            <input type="file" name="" id="CvDoc">
+            <input type="file" name="CvDoc" id="CvDoc">
             <br>
             <label for="Picture">Upload Picture optional</label>
-            <input type="file" name="" id="Picture">
+            <input type="file" name="Picture" id="Picture">
         </div><br><br><br>
 
         <div id="Profile">
@@ -79,12 +79,12 @@
             <label for="NoExperience">No</label>
             <input type="radio" id="NoExperience" name="Experience?"> <br><br>
             <div id="PreviousEmployers" style="display: none;">
-                <label for="Employer">Previous Employer Name</label>
-                <input type="text" id="Employer">
+                <label for="EmployerName">Previous Employer Name</label>
+                <input type="text" id="EmployerName" name="EmployerName">
                 <label for="EmployerPhone">Previous Employer Phone Number</label>
-                <input type="text" id="EmployerPhone">
+                <input type="text" id="EmployerPhone" name="EmployerPhone">
                 <label for="EmploymentLength">How long were you employed with them?</label>
-                <input type="text" id="EmploymentLength">
+                <input type="text" id="EmploymentLength" name="EmploymentLength">
             </div> <br>
 
             <p>What languages do you speak?</p>
@@ -103,24 +103,24 @@
 
             <h4>Reference Information</h4>
             <label for="ReferenceName">Reference Name</label>
-            <input type="text" id="ReferenceName" required> <br><br>
+            <input type="text" id="ReferenceName" name="ReferenceName" required> <br><br>
             
             <label for="ReferencePhone">Reference Phone</label>
-            <input type="text" id="ReferencePhone" required> <br><br>
+            <input type="text" id="ReferencePhone" name="ReferencePhone" required> <br><br>
             
             <label for="ReferenceEmail">Reference Email</label>
-            <input type="text" id="ReferenceEmail"> <br><br>
+            <input type="text" id="ReferenceEmail" name="ReferenceEmail"> <br><br>
             
             <label for="ReferenceAddress">Reference Address</label>
-            <input type="text" id="ReferenceAddress" required> <br><br>
+            <input type="text" id="ReferenceAddress" name="ReferenceAddress" required> <br><br>
 
             <label for="ReferenceId">Copy of Reference's ID</label>
-            <input type="file" id="ReferenceId" required>
+            <input type="file" id="ReferenceId" name="ReferenceId" required>
         </div><br><br><br>
 
         <div id="Agreement">
             <h3>Agreement, Terms, and Conditions</h3>
-            <p>I, <input type="text" placeholder="Type Full Name Here" required>, agree to the terms and conditions set above and understand that writing my name in the above text box constitutes a legally binding signature.</p>
+            <p>I, <input type="text" placeholder="Type Full Name Here" name="AgreementSignature" required>, agree to the terms and conditions set above and understand that writing my name in the above text box constitutes a legally binding signature.</p>
         </div>
 
         <input type="submit" value="Register">
