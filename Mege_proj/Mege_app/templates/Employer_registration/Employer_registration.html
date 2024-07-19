@@ -10,7 +10,8 @@
     <header>
         <a href="/Megenagna_main/Megenagna_main.html"><h3>Home</h3></a>
     </header>
-    <form action="" method="" name="EmployerRegistration">
+    <form action="/submit/" method="POST" name="EmployerRegistration">
+        {% csrf_token %}
         <fieldset id="Bio">
             <legend>Bio</legend>
             <label for="Fname">First Name</label>
