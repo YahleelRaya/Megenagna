@@ -63,3 +63,55 @@ class WorkerForm(forms.Form):
     reference_address = forms.CharField(max_length=200)
     reference_id = forms.FileField()
     agreement_signature = forms.CharField(max_length=100)
+
+    class EmployerForm(forms.Form):
+    
+     GENDER_CHOICES = [
+        ('Male', 'Male'),
+        ('Female', 'Female'),
+    ]
+    
+    JOB_TYPE_CHOICES = [
+        ('Cooking', 'Cooking'),
+        ('Cleaning', 'Cleaning'),
+        ('Babysitting', 'Babysitting'),
+    ]
+    
+    SCHEDULE_CHOICES = [
+        ('LiveIn', 'Live In'),
+        ('Commute', 'Commute'),
+    ]
+    
+    LANGUAGE_CHOICES = [
+        ('Amharic', 'Amharic'),
+        ('Oromigna', 'Oromigna'),
+        ('Tigrigna', 'Tigrigna'),
+        ('Somaligna', 'Somaligna'),
+        ('Sidamigna', 'Sidamigna'),
+    ]
+
+    # Bio Section
+    first_name = forms.CharField(max_length=50, label="First Name")
+    last_name = forms.CharField(max_length=50, label="Last Name")
+    age = forms.IntegerField(label="Age")
+    gender = forms.ChoiceField(choices=GENDER_CHOICES, widget=forms.RadioSelect, label="Gender")
+    address = forms.CharField(max_length=200, label="Address", required=False)
+
+    # Identity Section
+    government_id = forms.FileField(label="Upload Government ID", required=True)
+    picture = forms.FileField(label="Upload Picture (optional)", required=False)
+
+    # Profile Section
+    job_type = forms.MultipleChoiceField(choices=JOB_TYPE_CHOICES, widget=forms.CheckboxSelectMultiple, label="Job Type", required=True)
+    other_job = forms.CharField(max_length=50, label="Other Job", required=False)
+
+    schedule = forms.ChoiceField(choices=SCHEDULE_CHOICES, widget=forms.RadioSelect, label="Work Schedule", required=True)
+
+    languages = forms.MultipleChoiceField(choices=LANGUAGE_CHOICES, widget=forms.CheckboxSelectMultiple, label="Language Requirements", required=False)
+    other_language = forms.CharField(max_length=50, label="Other Language", required=False)
+    special_requirements = forms.CharField(max_length=300, widget=forms.Textarea, label="Special Requirements", required=False)
+
+    salary = forms.DecimalField(max_digits=10, decimal_places=2, label="Monthly Salary Budget", required=False)
+
+    # Agreement Section
+    agreement_signature = forms.CharField(max_length=100, label="Agreement Signature", required=True)

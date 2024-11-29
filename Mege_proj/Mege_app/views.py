@@ -3,14 +3,16 @@ from django.http import HttpResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseBadRequest
-from db_connection import db
+from .db_connection import db
 from .models import users_collection
 from .forms import WorkerForm
+from .forms import EmployerForm
 # Create your views here.
 #def retrieveEmployer(request):
    # template= loader.get_template('Employer_registration/Employer_registration.html')
    # return HttpResponse(template.render())
-users_collection = db['Worker_Coll']
+worker_collection = db['Worker_Coll']
+employer_collection = db['Employer_Coll']
 def retrieve(request, user_type):
     if user_type == 'employer':
         template_name = 'Employer_registration/Employer_registration.html'
@@ -31,32 +33,31 @@ def submit(request):
         lname = request.POST.get('Lname')
         age = request.POST.get('Age')
         return HttpResponse(f'Name:{fname}')
+
   
-def add_user(request):
-     if request.method == 'POST':
-        form = WorkerForm(request.POST, request.FILES)
+def add_user(request, user_type):
+    if request.method == 'POST':
+        form = WorkerForm(request.POST, request.FILES) if user_type == 'worker' else EmployerForm(request.POST, request.FILES)
+        
         if form.is_valid():
-            worker_data = form.cleaned_data
+            user_data = form.cleaned_data
 
             # Handle file uploads
-            if 'government_id' in request.FILES:
-                worker_data['government_id'] = request.FILES['government_id'].name
-            if 'cv' in request.FILES:
-                worker_data['cv'] = request.FILES['cv'].name
-            if 'picture' in request.FILES:
-                worker_data['picture'] = request.FILES['picture'].name
-            if 'reference_id' in request.FILES:
-                worker_data['reference_id'] = request.FILES['reference_id'].name
+            for file_field in ['government_id', 'cv', 'picture', 'reference_id']:
+                if file_field in request.FILES:
+                    user_data[file_field] = request.FILES[file_field].name
 
-            # Insert data into MongoDB
-            users_collection.insert_one(worker_data)
+            # Choose collection based on user type
+            collection = worker_collection if user_type == 'worker' else employer_collection
+            collection.insert_one(user_data)
             return HttpResponse("New user added")
         else:
             return HttpResponse("Form is not valid")
-     else:
-        form=WorkerForm
-        return render(request,)
-         
+    else:
+        form = WorkerForm() if user_type == 'worker' else EmployerForm()
+        template_name = 'Worker_registration/Worker_registration.html' if user_type == 'worker' else 'Employer_registration/Employer_registration.html'
+        return render(request,template_name, {'form': form})
+
 
    
 
